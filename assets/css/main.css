@@ -1,0 +1,252 @@
+.principal {
+    margin: 1.5em 1em;
+    display: grid;
+    gap: 1em;
+}
+
+.pag__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--card-color);
+}
+
+.card__image {
+    width: 100%;
+}
+
+.card__content {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .5em;
+}
+
+.card__title {
+    font: 1.2rem;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.card__author {
+    color: var(--alternative-font-color);
+    font-size: .9rem;
+    grid-column: span 2;
+}
+
+.card__info {
+    display: flex;
+    align-items: center;
+    color: var(--alternative-font-color);
+}
+
+.card__info-time::before {
+    content: "\e90c";
+    margin-right: .5em;
+    grid-column: span 2;
+}
+
+.card__info-views::before {
+    content: "\e90f";
+    margin-right: .5em;
+}
+
+.card__info-price::before {
+    content: "\e905";
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: .9rem;
+    justify-self: flex-end;
+}
+
+.card__button-play::before {
+    content: "\e90b";
+    font-size: 1.5em;
+}
+
+.card__button-buy::before {
+    content: "\e901";
+}
+
+.card__button-featured {
+    width: 100%;
+    grid-column: span 2;
+}
+
+.card__button-featured::before {
+    margin-right: .5em;
+}
+
+.recent__card {
+    display: none;
+}
+
+.section {
+    display: grid;
+    gap: 1em;
+}
+
+.card__image-desktop {
+    display: none;
+}
+
+.card__image-mobile {
+    display: block;
+}
+
+.card__image--desktop {
+    display: none;
+}
+
+.card__image--mobile {
+    display: block;
+}
+
+.art__card {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .principal {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 2em;
+        padding: 1em 3.75em;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        margin-top: 5em;
+        grid-template-areas:
+            "title title title"
+            "featured featured recent"
+            "video__section video__section video__section"
+            "art__card second__card second__card"
+            "shop__section shop__section shop__section"
+        ;
+    }
+
+    .recent__card {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        row-gap: 1.5em;
+        width: 256px;
+        padding: 1em;
+        box-sizing: border-box;
+        grid-area: recent;
+        align-self: flex-start;
+    }
+
+    .recent__card .card__title {
+        grid-column: auto;
+    }
+
+    .card__link {
+        font-size: .8rem;
+        font-weight: 600;
+        color: var(--button-color);
+        justify-self: flex-end;
+    }
+
+    .card__list {
+        display: grid;
+        row-gap: 1em;
+        grid-column: span 2;
+    }
+
+    .card__item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+    }
+
+    .card__item-thumbnail {
+        width: 2em;
+        grid-row: span 2;
+    }
+
+    .card__item-title {
+        font-size: .9rem;
+        line-height: 1.2rem;
+        font-weight: 700;
+    }
+
+    .card__item-perfil {
+        font-size: .8rem;
+        color: var(--alternative-font-color);
+    }
+
+    .pag__title {
+        grid-area: title;
+    }
+
+    .first__card {
+        grid-area: featured;
+
+    }
+
+    .video__section {
+        grid-area: video__section;
+    }
+
+    .art__card {
+        grid-area: art__card;
+    }
+
+    .second__card {
+        grid-area: second__card;
+    }
+
+    .shop__section {
+        grid-area: shop__section;
+    }
+
+    .card__image-desktop {
+        display: block;
+    }
+
+    .card__image-mobile {
+        display: none;
+    }
+
+    .card__button-featured {
+        grid-column: auto;
+    }
+
+    .section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .section__title {
+        grid-column: span 4;
+    }
+
+    .card__image--desktop {
+        display: block;
+    }
+
+    .card__image--mobile {
+        display: none;
+    }
+
+    .art__card {
+        display: block;
+    }
+}

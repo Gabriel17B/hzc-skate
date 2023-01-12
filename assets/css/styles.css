@@ -1,0 +1,34 @@
+@import url(header.css);
+@import url(nav.css);
+@import url(main.css);
+@import url(main-picos.css);
+
+@font-face {
+    font-family: 'icons';
+    src: url(../font/icones.ttf);
+}
+
+:root {
+    --background-color: #1D232A; 
+    --header-color: #15191C;
+    --alternative-font-color: #95999C;
+    --card-color: #2C343A;
+    --button-color: #0480DC;
+    --principal-font: 'Open Sans', 'icons', sans-serif;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--principal-font);
+    color: var(--white);
+    font-size: 16px;
+}
+
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}

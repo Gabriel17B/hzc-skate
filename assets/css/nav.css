@@ -1,0 +1,76 @@
+.side__menu {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: var(--header-color);
+    width: 75vw;
+    height: 100vh;
+
+    position: absolute;
+    left: -100vw;
+    transition: .25s;
+}
+
+.side__menu--active {
+    left: 0;
+    transition: .25s;
+}
+
+.side__menu-logo {
+    width: 7.4em;
+    align-self: center;
+    padding: 1em;
+}
+
+.side__menu-link {
+    height: 4em;
+    color: var(--alternative-font-color);
+    padding-left: 4em;
+    display: flex;
+    align-items: center;
+}
+
+.side__menu-link::before {
+    width: 1.5em;
+    font-size: 1.5em;
+    position: absolute;
+    left: 24px;
+}
+
+.side__menu-link--inicio::before {
+    content: "\e902";
+}
+
+.side__menu-link--videos::before {
+    content: "\e90e";
+}
+
+.side__menu-link--picos::before {
+    content: "\e909";
+}
+
+.side__menu-link--integrantes::before {
+    content: "\e903";
+}
+
+.side__menu-link--camisas::before {
+    content: "\e900";
+}
+
+.side__menu-link--pinturas::before {
+    content: "\e90a";
+}
+
+.side__menu-link--active {
+    color: var(--white);
+    padding-left: 3.5em;
+    border-left: 8px solid var(--white);
+}
+
+@media screen and (min-width:1440px) {
+    .side__menu {
+        position: static;
+        width: 200px;
+        grid-column: 1;
+    }
+}

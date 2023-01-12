@@ -1,0 +1,74 @@
+.header {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-color);
+    padding: .5em 1em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.header__menu i::before {
+    content: "\e904";
+    font-size: 1.5em;
+}
+
+.header__notifications i::before {
+    content: "\e906";
+    font-size: 1.5em;
+}
+
+.logo__header {
+    width: 15%;
+}
+
+.header__perfil {
+    display: none;
+}
+
+@media screen and (min-width:1440px) {
+    .header {
+        background-color: var(--header-color);
+        display: grid;
+        column-gap: 2em;
+        grid-template-columns: 1fr auto;
+        padding: 1em 3.75em;
+        height: 5em;
+        box-sizing: border-box;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .header__menu, .logo__header {
+        display: none;
+    }
+
+    .header__perfil {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: .5em;
+        align-items: center;
+        justify-self: flex-end;
+        color: var(--alternative-font-color);
+        padding: .5em 2em;
+        border-right: 1px solid var(--alternative-font-color);
+    }
+
+    .header__perfil::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/profile_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .header__perfil::after {
+        content: "\e90d";
+        color: var(--white);
+        font-size: 1.5rem;
+        display: block;
+    }
+}
